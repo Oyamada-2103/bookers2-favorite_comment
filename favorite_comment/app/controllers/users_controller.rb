@@ -23,6 +23,19 @@ class UsersController < ApplicationController
       render "edit"
     end
   end
+  
+  # ==============フォロー機能実装追加================
+  def follows
+    user = User.find(params[:id])
+    @users = user.followings
+  end
+
+  def followers
+    user = User.find(params[:id])
+    @users = user.followers
+  end
+# ==============追加================
+  
 
   private
 
