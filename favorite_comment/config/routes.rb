@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'searches/search'
+  get 'searchs/search'
   # get 'relationships/create'
   # get 'relationships/destroy'
   devise_for :users
@@ -6,6 +8,11 @@ Rails.application.routes.draw do
 
   root :to => "homes#top"
   get "home/about" => "homes#about"
+  
+  
+  # 検索機能の実装
+  get 'search' => "searches#search"
+
 
   resources :books, only: [:index, :show, :edit, :create, :destroy, :update] do
     resource :favorites, only: [:create, :destroy]

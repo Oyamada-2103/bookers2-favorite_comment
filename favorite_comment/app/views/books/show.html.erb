@@ -7,6 +7,11 @@
       <%= render 'books/form', book: Book.new %>
     </div>
     <div class='col-md-8 offset-md-1'>
+
+      <!--ここから検索機能の実装-->
+      <%= render "searches/search" %>
+      <!--ここまで-->
+
   		<h2>Book detail</h2>
   		<table class='table'>
   		  <tr>
@@ -25,10 +30,10 @@
           <% end %>
         </tr>
       </table>
-      
-      
+
+
       <%= render 'books/comment', book: @book,book_comment: @book_comment%>
-    
+
     </div>
   </div>
 </div>
