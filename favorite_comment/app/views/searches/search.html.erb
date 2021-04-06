@@ -5,7 +5,7 @@
   <div class = "row">
     <div class='col-12'>
       <% if @range == "User" %>
-        <h3> Users search for "<%= @users_word %>" </h3>
+        <h3> Users search for "<%= @word %>" </h3>
         <table class = "table">
           <thead>
             <tr>
@@ -25,7 +25,7 @@
           </tbody>
         </table>
       <% else %>
-        <h3> Book search for "<%= @books_word %>" </h3>
+        <h3> Book search for "<%= @word %>" </h3>
         <table class = "table">
           <thead>
             <tr>
@@ -45,3 +45,13 @@
           </tbody>
         </table>
       <% end %>
+
+
+<!--または以下でもおｋ-->
+<!--< % if @model == 'user' %>-->
+<!--	<h3>Users search for "< %= @content %>"</h3>-->
+<!--  < %= render 'users/index', users: @records %>-->
+<!--< % elsif @model == 'book' %>-->
+<!--	<h3>Books search for "< %= @content %>"</h3>-->
+<!--  < %= render 'books/index', books: @records %>-->
+<!--< % end %>-->
