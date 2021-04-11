@@ -36,6 +36,11 @@
         <%= render partial: 'book_comments/comment', locals: { book: @book, book_comment: @book_comment} %>
       </div>
 
+      <%= form_with model:[@book,@book_comment] do |f| %>
+      <%= f.text_area :comment, size:"90x5", id:"textarea" %><br>
+      <%= f.submit '送信' %>
+    <% end %>
+
     </div>
   </div>
 </div>
